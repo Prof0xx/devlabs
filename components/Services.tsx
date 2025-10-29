@@ -1,6 +1,6 @@
 "use client";
 
-import { Webhook, Zap, Code, Shield, Smartphone, Database, Plug, Mobile } from "lucide-react";
+import { Webhook, Zap, Code, Shield, Smartphone, Database, Plug } from "lucide-react";
 import { motion } from "framer-motion";
 
 interface Service {
@@ -44,7 +44,7 @@ const services: Service[] = [
     title: "Mobile App Development",
     description:
       "Native and cross-platform mobile applications for iOS and Android. We build high-performance mobile apps with modern frameworks including React Native, Flutter, and native Swift/Kotlin development.",
-    icon: <Mobile className="h-10 w-10 text-primary-600" />,
+    icon: <Smartphone className="h-10 w-10 text-primary-600" />,
   },
   {
     title: "Platform Tools & Dashboards",

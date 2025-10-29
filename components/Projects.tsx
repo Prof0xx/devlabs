@@ -1,6 +1,6 @@
 "use client";
 
-import { Code2, Sparkles, Globe, Lock, ArrowLeftRight, Wallet } from "lucide-react";
+import { Code2, Sparkles, Globe, Lock, ArrowLeftRight, CreditCard } from "lucide-react";
 import { motion } from "framer-motion";
 
 interface Project {
@@ -19,7 +19,7 @@ const projects: Project[] = [
     description:
       "Developed a comprehensive web3 wallet and exchange platform with integrated fiat on/off-ramp functionality via virtual cards. Built a seamless bridge between traditional finance and decentralized finance, enabling users to easily convert between crypto and fiat currencies.",
     category: "Web3 Wallet & Exchange",
-    icon: <Wallet className="h-8 w-8 text-primary-600" />,
+    icon: <CreditCard className="h-8 w-8 text-primary-600" />,
     highlights: [
       "Multi-chain wallet integration",
       "Fiat on/off-ramp with virtual cards",

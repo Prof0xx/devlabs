@@ -5,12 +5,8 @@ import {
   Database, 
   Zap, 
   Shield, 
-  Globe, 
-  Lock,
   Webhook,
-  Plug,
-  Cloud,
-  Workflow
+  Plug
 } from "lucide-react";
 import { motion } from "framer-motion";
 
