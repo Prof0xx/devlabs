@@ -17,18 +17,36 @@ export default function Hero() {
   // Animated gradient background
   const [mousePosition, setMousePosition] = useState({ x: 50, y: 50 });
   const [isClient, setIsClient] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
     setIsClient(true);
-    const handleMouseMove = (e: MouseEvent) => {
-      setMousePosition({
-        x: (e.clientX / window.innerWidth) * 100,
-        y: (e.clientY / window.innerHeight) * 100,
-      });
+    
+    // Check if mobile
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768 || /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent));
     };
-    window.addEventListener("mousemove", handleMouseMove);
-    return () => window.removeEventListener("mousemove", handleMouseMove);
-  }, []);
+    checkMobile();
+    
+    // Mouse tracking only on desktop for performance
+    if (typeof window !== "undefined" && !isMobile) {
+      const handleMouseMove = (e: MouseEvent) => {
+        setMousePosition({
+          x: (e.clientX / window.innerWidth) * 100,
+          y: (e.clientY / window.innerHeight) * 100,
+        });
+      };
+      window.addEventListener("mousemove", handleMouseMove);
+      window.addEventListener("resize", checkMobile);
+      return () => {
+        window.removeEventListener("mousemove", handleMouseMove);
+        window.removeEventListener("resize", checkMobile);
+      };
+    } else {
+      window.addEventListener("resize", checkMobile);
+      return () => window.removeEventListener("resize", checkMobile);
+    }
+  }, [isMobile]);
 
   return (
     <section
@@ -38,23 +56,26 @@ export default function Hero() {
     >
       {/* Animated gradient mesh background */}
       <div className="absolute inset-0 overflow-hidden">
-        <div
-          className="absolute inset-0 opacity-20"
-          style={{
-            background: `radial-gradient(circle at ${mousePosition.x}% ${mousePosition.y}%, rgba(14, 165, 233, 0.2) 0%, transparent 50%)`,
-            transition: "background 0.3s ease-out",
-          }}
-        />
+        {/* Mouse gradient only on desktop */}
+        {!isMobile && (
+          <div
+            className="absolute inset-0 opacity-20"
+            style={{
+              background: `radial-gradient(circle at ${mousePosition.x}% ${mousePosition.y}%, rgba(14, 165, 233, 0.2) 0%, transparent 50%)`,
+              transition: "background 0.3s ease-out",
+            }}
+          />
+        )}
         
-        {/* Simplified animated blobs */}
+        {/* Simplified animated blobs - slower/static on mobile */}
         <motion.div
           className="absolute -top-40 -right-40 w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl opacity-15"
-          animate={{
+          animate={isMobile ? {} : {
             x: [0, 100, 0],
             y: [0, 50, 0],
             scale: [1, 1.2, 1],
           }}
-          transition={{
+          transition={isMobile ? {} : {
             duration: 20,
             repeat: Infinity,
             ease: "easeInOut",
@@ -62,50 +83,53 @@ export default function Hero() {
         />
         <motion.div
           className="absolute -bottom-40 -left-40 w-96 h-96 bg-cyan-500 rounded-full mix-blend-multiply filter blur-3xl opacity-15"
-          animate={{
+          animate={isMobile ? {} : {
             x: [0, -100, 0],
             y: [0, -50, 0],
             scale: [1, 1.3, 1],
           }}
-          transition={{
+          transition={isMobile ? {} : {
             duration: 25,
             repeat: Infinity,
             ease: "easeInOut",
             delay: 1,
           }}
         />
-        <motion.div
-          className="absolute top-1/2 left-1/2 w-96 h-96 bg-primary-400 rounded-full mix-blend-multiply filter blur-3xl opacity-8"
-          animate={{
-            x: [0, 150, 0],
-            y: [0, -100, 0],
-            scale: [1, 1.1, 1],
-          }}
-          transition={{
-            duration: 30,
-            repeat: Infinity,
-            ease: "easeInOut",
-            delay: 2,
-          }}
-        />
+        {/* Third blob disabled on mobile for performance */}
+        {!isMobile && (
+          <motion.div
+            className="absolute top-1/2 left-1/2 w-96 h-96 bg-primary-400 rounded-full mix-blend-multiply filter blur-3xl opacity-8"
+            animate={{
+              x: [0, 150, 0],
+              y: [0, -100, 0],
+              scale: [1, 1.1, 1],
+            }}
+            transition={{
+              duration: 30,
+              repeat: Infinity,
+              ease: "easeInOut",
+              delay: 2,
+            }}
+          />
+        )}
       </div>
 
-      {/* Floating particles */}
+      {/* Floating particles - reduced on mobile */}
       {isClient && (
-        <div className="absolute inset-0 overflow-hidden">
-          {[...Array(8)].map((_, i) => (
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          {[...Array(isMobile ? 3 : 8)].map((_, i) => (
             <motion.div
               key={i}
               className="absolute w-2 h-2 bg-primary-400 rounded-full opacity-35"
               initial={{
-                x: Math.random() * window.innerWidth,
-                y: Math.random() * window.innerHeight,
+                x: typeof window !== "undefined" ? Math.random() * window.innerWidth : 0,
+                y: typeof window !== "undefined" ? Math.random() * window.innerHeight : 0,
               }}
-              animate={{
-                y: [null, -100, window.innerHeight + 100],
+              animate={isMobile ? {} : {
+                y: typeof window !== "undefined" ? [null, -100, window.innerHeight + 100] : [],
                 opacity: [0.3, 0.6, 0],
               }}
-              transition={{
+              transition={isMobile ? {} : {
                 duration: Math.random() * 10 + 12,
                 repeat: Infinity,
                 delay: Math.random() * 10,
