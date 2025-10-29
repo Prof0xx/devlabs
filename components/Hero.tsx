@@ -1,6 +1,6 @@
 "use client";
 
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Code } from "lucide-react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 
@@ -126,6 +126,16 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="text-center"
         >
+          {/* Logo Icon */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            className="flex justify-center mb-6"
+          >
+            <Code className="h-16 w-16 md:h-20 md:w-20 text-white/90" strokeWidth={1.5} />
+          </motion.div>
+
           {/* Main heading */}
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
