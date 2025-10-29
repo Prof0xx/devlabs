@@ -1,6 +1,6 @@
 "use client";
 
-import { Webhook, Zap, Code, Shield, Smartphone, Database, Plug } from "lucide-react";
+import { Webhook, Zap, Code, Shield, Smartphone, Database, Plug, ArrowLeftRight, Layers } from "lucide-react";
 import { motion } from "framer-motion";
 
 interface Service {
@@ -25,7 +25,7 @@ const services: Service[] = [
   {
     title: "API Integration & Development",
     description:
-      "Seamless integration with third-party APIs and custom API development to power your applications with robust backend services. Extensive experience with REST APIs, GraphQL, WebSockets, and various SDKs including blockchain, payment, and trading platform integrations.",
+      "Seamless integration with third-party APIs and custom API development. Extensive experience with REST APIs, GraphQL, WebSockets, and SDKs including blockchain, payment processors, and trading platform integrations.",
     icon: <Zap className="h-10 w-10 text-primary-600" />,
   },
   {
@@ -33,6 +33,18 @@ const services: Service[] = [
     description:
       "Expert-level implementation of SDKs and custom API development. We've integrated with major platforms including cryptocurrency exchanges, payment processors, blockchain networks, and trading platforms with robust error handling and rate limiting.",
     icon: <Plug className="h-10 w-10 text-primary-600" />,
+  },
+  {
+    title: "Trading Platform Development",
+    description:
+      "Building sophisticated trading platforms with order matching engines, market data feeds, account management, and risk management systems. Experience with P2P trading, exchanges, and DeFi protocols.",
+    icon: <ArrowLeftRight className="h-10 w-10 text-primary-600" />,
+  },
+  {
+    title: "Blockchain & Smart Contract Integration",
+    description:
+      "Smart contract development, multi-chain support, wallet integration, token standards (ERC-20, ERC-721), DeFi protocol integration, and transaction signing & verification.",
+    icon: <Layers className="h-10 w-10 text-primary-600" />,
   },
   {
     title: "Custom Website Development",
@@ -49,13 +61,13 @@ const services: Service[] = [
   {
     title: "Platform Tools & Dashboards",
     description:
-      "Custom tools and administrative dashboards to streamline operations, manage data, and enhance productivity.",
+      "Custom tools and administrative dashboards to streamline operations, manage data, and enhance productivity. Backend services including microservices architecture, database optimization, and API rate limiting.",
     icon: <Database className="h-10 w-10 text-primary-600" />,
   },
   {
     title: "Security & Best Practices",
     description:
-      "Implementing security best practices, code reviews, and ensuring your applications meet industry standards.",
+      "Implementing security best practices, encryption & hashing, API security, OAuth 2.0 implementation, code reviews, and ensuring your applications meet industry standards.",
     icon: <Shield className="h-10 w-10 text-primary-600" />,
   },
 ];
@@ -75,7 +87,7 @@ export default function Services() {
             <span className="gradient-text">Our Services</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Comprehensive development solutions to bring your vision to life
+            Comprehensive technology solutions across development, integration, and innovation
           </p>
         </motion.div>
 

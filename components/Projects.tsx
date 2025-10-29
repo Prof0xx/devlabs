@@ -118,8 +118,7 @@ export default function Projects() {
             <span className="gradient-text">Our Projects</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Showcasing our expertise across web3, web2, and custom development
-            solutions
+            Showcasing innovative technology solutions across blockchain, trading platforms, web3, mobile apps, and custom software development
           </p>
         </motion.div>
 

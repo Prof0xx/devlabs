@@ -7,8 +7,8 @@ import Footer from "@/components/Footer";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Dev Labs - Full-Service Development Agency",
-  description: "Professional development agency specializing in web3, web2, and custom web applications. Building innovative solutions for Dextools, Boost Labs, and leading web3 projects.",
+  title: "Dev Labs - Innovative Technology Solutions & Development Agency",
+  description: "Professional technology agency specializing in blockchain, web3, trading platforms, mobile apps, and custom software development. Building innovative solutions for SpeedWallet, Dextools, Boost Labs, and leading technology projects.",
 };
 
 export default function RootLayout({

@@ -1,7 +1,6 @@
 import Hero from "@/components/Hero";
 import Projects from "@/components/Projects";
 import Services from "@/components/Services";
-import TechnicalExpertise from "@/components/TechnicalExpertise";
 import Contact from "@/components/Contact";
 
 export default function Home() {
@@ -10,7 +9,6 @@ export default function Home() {
       <Hero />
       <Projects />
       <Services />
-      <TechnicalExpertise />
       <Contact />
     </>
   );

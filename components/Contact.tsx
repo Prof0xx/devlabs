@@ -36,10 +36,7 @@ export default function Contact() {
                 Let's Build Something Amazing
               </h3>
               <p className="text-gray-600 leading-relaxed mb-6">
-                Whether you're looking to build a web3 application, customize a
-                web platform, or develop a complete solution from scratch, we're
-                here to help. Our team specializes in turning complex
-                requirements into elegant, functional applications.
+                Whether you're building a blockchain platform, trading system, mobile application, or custom software solution, we're here to help. Our team specializes in turning complex technical requirements into elegant, scalable, and functional technology solutions.
               </p>
             </div>
 

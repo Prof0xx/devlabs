@@ -167,7 +167,7 @@ export default function Hero() {
             className="inline-flex items-center gap-2 px-4 py-2 mb-8 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white/90 text-sm font-medium"
           >
             <Sparkles className="h-4 w-4 text-primary-400" />
-            <span>Building the Future of Web Development</span>
+            <span>Building the Future of Technology</span>
           </motion.div>
 
           {/* Main heading with gradient text */}
@@ -185,9 +185,9 @@ export default function Hero() {
             variants={itemVariants}
             className="text-2xl md:text-4xl lg:text-5xl font-bold text-white mb-6 max-w-4xl mx-auto leading-tight"
           >
-            Full-Service{" "}
+            Innovative Technology Solutions{" "}
             <span className="bg-gradient-to-r from-primary-400 to-cyan-400 bg-clip-text text-transparent">
-              Development Agency
+              & Development Agency
             </span>
           </motion.p>
 
@@ -196,7 +196,7 @@ export default function Hero() {
             variants={itemVariants}
             className="text-lg md:text-xl text-gray-300 mb-12 max-w-2xl mx-auto leading-relaxed"
           >
-            Building innovative web solutions for web3, web2, and custom applications.
+            Building innovative technology solutions across web3, blockchain, trading platforms, mobile apps, and custom software.
             <br />
             <span className="text-white font-semibold">We turn ideas into reality.</span>
           </motion.p>
@@ -268,8 +268,8 @@ export default function Hero() {
             className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto"
           >
             {[
-              { icon: Code, title: "Custom Development", color: "text-blue-400" },
-              { icon: Zap, title: "Web3 Solutions", color: "text-cyan-400" },
+              { icon: Code, title: "Custom Solutions", color: "text-blue-400" },
+              { icon: Zap, title: "Web3 & Blockchain", color: "text-cyan-400" },
               { icon: Shield, title: "Secure & Reliable", color: "text-primary-400" },
               { icon: Globe, title: "Global Reach", color: "text-indigo-400" },
             ].map((feature, index) => (

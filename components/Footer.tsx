@@ -15,7 +15,7 @@ export default function Footer() {
               <span className="text-xl font-bold text-white">Dev Labs</span>
             </div>
             <p className="text-gray-400">
-              Building innovative web solutions for the future of digital
+              Building innovative technology solutions for the future of digital
               experiences.
             </p>
           </div>
@@ -45,14 +45,6 @@ export default function Footer() {
                   className="hover:text-primary-400 transition-colors"
                 >
                   Services
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#expertise"
-                  className="hover:text-primary-400 transition-colors"
-                >
-                  Expertise
                 </a>
               </li>
               <li>

@@ -67,16 +67,6 @@ export default function Navbar() {
               Services
             </a>
             <a
-              href="#expertise"
-              className={`transition-colors font-medium ${
-                scrolled
-                  ? "text-gray-900 hover:text-primary-600"
-                  : "text-white hover:text-primary-200"
-              }`}
-            >
-              Expertise
-            </a>
-            <a
               href="#contact"
               className="bg-primary-600 text-white px-6 py-2 rounded-lg hover:bg-primary-700 transition-colors font-medium"
             >
@@ -120,13 +110,6 @@ export default function Navbar() {
               onClick={() => setIsOpen(false)}
             >
               Services
-            </a>
-            <a
-              href="#expertise"
-              className="block py-2 text-gray-700 hover:text-primary-600 transition-colors"
-              onClick={() => setIsOpen(false)}
-            >
-              Expertise
             </a>
             <a
               href="#contact"
