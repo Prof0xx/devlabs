@@ -1,6 +1,6 @@
 "use client";
 
-import { Webhook, Zap, Code, Shield, Smartphone, Database, Plug, ArrowLeftRight, Layers } from "lucide-react";
+import { Webhook, Zap, Code, Smartphone, Database, Plug, ArrowLeftRight, Layers } from "lucide-react";
 import { motion } from "framer-motion";
 
 interface Service {
@@ -63,12 +63,6 @@ const services: Service[] = [
     description:
       "Custom tools and administrative dashboards to streamline operations, manage data, and enhance productivity. Backend services including microservices architecture, database optimization, and API rate limiting.",
     icon: <Database className="h-10 w-10 text-primary-600" />,
-  },
-  {
-    title: "Security & Best Practices",
-    description:
-      "Implementing security best practices, encryption & hashing, API security, OAuth 2.0 implementation, code reviews, and ensuring your applications meet industry standards.",
-    icon: <Shield className="h-10 w-10 text-primary-600" />,
   },
 ];
 
