@@ -85,10 +85,12 @@ const projects: Project[] = [
     category: "Automation Platforms",
     icon: <Globe className="h-8 w-8 text-primary-600" />,
     highlights: [
-      "Smart contract integration",
-      "Wallet connectivity",
-      "DeFi protocol integration",
-      "Gas optimization strategies",
+      "Engagement-boosting workflows (auto-like/comment within safe limits)",
+      "Automated DMs and smart reply templates",
+      "Audience growth analytics and views/impressions tracking",
+      "Scheduling and cross-platform posting",
+      "Inbox triage and quick-reply shortcuts",
+      "A/B testing and performance reporting",
     ],
   },
   {
