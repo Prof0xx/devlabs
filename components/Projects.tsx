@@ -85,12 +85,10 @@ const projects: Project[] = [
     category: "Automation Platforms",
     icon: <Globe className="h-8 w-8 text-primary-600" />,
     highlights: [
-      "Engagement-boosting workflows (auto-like/comment within safe limits)",
-      "Automated DMs and smart reply templates",
-      "Audience growth analytics and views/impressions tracking",
-      "Scheduling and cross-platform posting",
-      "Inbox triage and quick-reply shortcuts",
-      "A/B testing and performance reporting",
+      "Engagement boosts (likes/comments within safe limits)",
+      "Automated DMs and smart replies",
+      "Views/impressions and growth analytics",
+      "Scheduling and cross‑posting",
     ],
   },
   {
