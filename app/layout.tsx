@@ -13,6 +13,25 @@ const spaceGrotesk = Space_Grotesk({
 export const metadata: Metadata = {
   title: "Dev Labs - Innovative Technology Solutions & Development Agency",
   description: "Professional technology agency specializing in blockchain, web3, trading platforms, mobile apps, and custom software development. Building innovative solutions for SpeedWallet, Dextools, Boost Labs, and leading technology projects.",
+  icons: {
+    icon: "/icon.svg",
+  },
+  openGraph: {
+    title: "Dev Labs — Innovative Technology Solutions",
+    description:
+      "Blockchain, trading platforms, mobile apps, custom software. See our work and get in touch.",
+    url: "https://devlabs.example", // update to real domain when available
+    siteName: "Dev Labs",
+    images: [{ url: "/opengraph-image" }],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Dev Labs — Innovative Technology Solutions",
+    description:
+      "Blockchain, trading platforms, mobile apps, custom software.",
+    images: ["/twitter-image"],
+  },
 };
 
 export default function RootLayout({

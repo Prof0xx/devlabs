@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 interface Project {
   title: string;
   client: string;
+  clientUrl?: string;
   description: string;
   category: string;
   icon: React.ReactNode;
@@ -16,6 +17,7 @@ const projects: Project[] = [
   {
     title: "SpeedWallet - Web3 Wallet & Exchange",
     client: "SpeedWallet",
+    clientUrl: "https://speedwallet.co.za",
     description:
       "Developed a comprehensive web3 wallet and exchange platform with integrated fiat on/off-ramp functionality via virtual cards. Built a seamless bridge between traditional finance and decentralized finance, enabling users to easily convert between crypto and fiat currencies.",
     category: "Web3 Wallet & Exchange",
@@ -32,6 +34,7 @@ const projects: Project[] = [
   {
     title: "Dextools Supplementary Tools",
     client: "Dextools",
+    clientUrl: "https://www.dextools.io",
     description:
       "Developed supplementary tools enabling users to easily update their project's social media links and information for listing on DEX platforms. Streamlined the onboarding process for new token projects.",
     category: "Web3 Platform Tools",
@@ -45,9 +48,9 @@ const projects: Project[] = [
   },
   {
     title: "P2P Trading Platform",
-    client: "Cryptocurrency Exchange",
+    client: "Hyperliquid",
     description:
-      "Built a comprehensive peer-to-peer trading platform with secure escrow services, real-time order matching, and multi-currency support. Implemented robust trading infrastructure with advanced API integrations and SDK implementations.",
+      "Built a comprehensive peer-to-peer trading platform with secure escrow services, real-time order matching, and multi-currency support, referencing Hyperliquid for market structure and performance considerations.",
     category: "Trading Platform",
     icon: <ArrowLeftRight className="h-8 w-8 text-primary-600" />,
     highlights: [
@@ -62,6 +65,7 @@ const projects: Project[] = [
   {
     title: "Marketing Platform Development",
     client: "Boost Labs",
+    clientUrl: "https://boostlab.app",
     description:
       "Built comprehensive web3/web2 marketing solutions for Boost Labs, a leading marketing agency. Created tools and platforms that bridge traditional and blockchain marketing strategies.",
     category: "Web3/Web2 Marketing",
@@ -74,11 +78,11 @@ const projects: Project[] = [
     ],
   },
   {
-    title: "Onchain Web Applications",
-    client: "Various Web3 Projects",
+    title: "Social Media Tools & Automation",
+    client: "Various Projects",
     description:
-      "Developed multiple onchain web applications and tools for leading web3 projects. Built decentralized applications with seamless user experiences and robust blockchain integration.",
-    category: "Web3 Applications",
+      "Built social media tooling and automation systems: scheduling, content workflows, cross-platform posting, and analytics dashboards, with robust API integrations and reliability.",
+    category: "Automation Platforms",
     icon: <Globe className="h-8 w-8 text-primary-600" />,
     highlights: [
       "Smart contract integration",
@@ -142,7 +146,13 @@ export default function Projects() {
                       {project.title}
                     </h3>
                     <p className="text-primary-600 font-semibold">
-                      {project.client}
+                      {project.clientUrl ? (
+                        <a href={project.clientUrl} target="_blank" rel="noopener noreferrer" className="hover:underline">
+                          {project.client}
+                        </a>
+                      ) : (
+                        project.client
+                      )}
                     </p>
                   </div>
                 </div>

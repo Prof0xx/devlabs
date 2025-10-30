@@ -1,6 +1,6 @@
 "use client";
 
-import { Github, Linkedin, Mail, Code } from "lucide-react";
+import { Code } from "lucide-react";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -8,7 +8,7 @@ export default function Footer() {
   return (
     <footer className="bg-gray-900 text-gray-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div>
             <div className="flex items-center space-x-2 mb-4">
               <Code className="h-6 w-6 text-primary-400" />
@@ -56,37 +56,6 @@ export default function Footer() {
                 </a>
               </li>
             </ul>
-          </div>
-
-          <div>
-            <h3 className="text-white font-semibold mb-4">Connect</h3>
-            <div className="flex space-x-4">
-              <a
-                href="https://github.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-primary-400 transition-colors"
-                aria-label="GitHub"
-              >
-                <Github className="h-5 w-5" />
-              </a>
-              <a
-                href="https://linkedin.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-primary-400 transition-colors"
-                aria-label="LinkedIn"
-              >
-                <Linkedin className="h-5 w-5" />
-              </a>
-              <a
-                href="mailto:contact@devlabs.com"
-                className="hover:text-primary-400 transition-colors"
-                aria-label="Email"
-              >
-                <Mail className="h-5 w-5" />
-              </a>
-            </div>
           </div>
         </div>
 
