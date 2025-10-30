@@ -65,7 +65,7 @@ const projects: Project[] = [
   {
     title: "Marketing Platform Development",
     client: "Boost Labs",
-    clientUrl: "https://boostlab.app",
+    clientUrl: "https://boostlabs.app",
     description:
       "Built comprehensive web3/web2 marketing solutions for Boost Labs, a leading marketing agency. Created tools and platforms that bridge traditional and blockchain marketing strategies.",
     category: "Web3/Web2 Marketing",
